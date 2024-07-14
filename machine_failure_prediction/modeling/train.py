@@ -1,15 +1,11 @@
 from pathlib import Path
 
-import typer
 from loguru import logger
 from tqdm import tqdm
 
 from machine_failure_prediction.config import MODELS_DIR, PROCESSED_DATA_DIR
 
-app = typer.Typer()
 
-
-@app.command()
 def main(
     # ---- REPLACE DEFAULT PATHS AS APPROPRIATE ----
     features_path: Path = PROCESSED_DATA_DIR / "features.csv",
@@ -27,4 +23,4 @@ def main(
 
 
 if __name__ == "__main__":
-    app()
+    main()
