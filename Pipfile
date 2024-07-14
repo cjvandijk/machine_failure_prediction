@@ -18,6 +18,7 @@ typer = "*"
 "machine_failure_prediction" ={editable = true, path = "."}
 jupyter = "*"
 seaborn = "*"
+mlflow = "*"
 
 [requires]
 python_version = "3.10"

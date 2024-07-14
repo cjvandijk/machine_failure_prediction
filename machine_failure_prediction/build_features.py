@@ -6,9 +6,6 @@ import numpy as np
 from scipy import stats
 
 from machine_failure_prediction import config
-from machine_failure_prediction.config import PROCESSED_DATA_DIR
-from machine_failure_prediction.config import DATA_DIR = PROJ_ROOT / "data"
-from machine_failure_prediction.config import RAW_DATA_DIR = DATA_DIR / "raw"
 
 
 def eliminate_outliers(df: pd.DataFrame) -> pd.DataFrame:
@@ -45,6 +42,7 @@ def main(
     df = eliminate_outliers(df)
     
     df.to_csv(output_path, index=False)
+    
 
 if __name__ == "__main__":
     main()
