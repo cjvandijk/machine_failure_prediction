@@ -4,7 +4,7 @@
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
 
-MLOps for managing service predicting machine failure.
+MLOps for managing web service which predicts machine failure.
 
 ## Project Organization
 
@@ -23,28 +23,22 @@ MLOps for managing service predicting machine failure.
 ├── models             <- Trained and serialized models, model predictions, or model summaries
 │
 ├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
-│
-├── pyproject.toml     <- Project configuration file with package metadata for machine_failure_prediction
-│                         and configuration for tools like black
+│                         the creator's initials, and a short `-` delimited description.
 │
 ├── references         <- Data dictionaries, manuals, and all other explanatory materials.
 │
 ├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
 │   └── figures        <- Generated graphics and figures to be used in reporting
 │
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
+├── Pipfile            <- Dependencies for reproducing the analysis environment via pipenv
+|
+|── Pipfile.lock       <- Locked dependency versions for installations 
 │
 ├── setup.cfg          <- Configuration file for flake8
 │
 └── machine_failure_prediction                <- Source code for use in this project.
     │
     ├── __init__.py    <- Makes machine_failure_prediction a Python module
-    │
-    ├── data           <- Scripts to download or generate data
-    │   └── make_dataset.py
     │
     ├── features       <- Scripts to turn raw data into features for modeling
     │   └── build_features.py

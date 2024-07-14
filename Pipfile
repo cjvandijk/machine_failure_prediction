@@ -16,6 +16,8 @@ scikit-learn = "*"
 tqdm = "*"
 typer = "*"
 "machine_failure_prediction" ={editable = true, path = "."}
+jupyter = "*"
+seaborn = "*"
 
 [requires]
 python_version = "3.10"
