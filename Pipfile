@@ -1,0 +1,21 @@
+[packages]
+black = "*"
+flake8 = "*"
+ipython = "*"
+isort = "*"
+jupyterlab = "*"
+loguru = "*"
+matplotlib = "*"
+mkdocs = "*"
+notebook = "*"
+numpy = "*"
+pandas = "*"
+pip = "*"
+python-dotenv = "*"
+scikit-learn = "*"
+tqdm = "*"
+typer = "*"
+"machine_failure_prediction" ={editable = true, path = "."}
+
+[requires]
+python_version = "3.10"
