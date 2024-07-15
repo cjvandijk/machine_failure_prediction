@@ -8,6 +8,33 @@ MLOps for managing web service which predicts machine failure.
 
 Initial exploratory data analysis is in notebooks/1.0-cvd-machine-failure-eda.ipynb
 
+Launch EC2 instance, ssh into it
+Prepare environment ()
+Install conda
+Set python version 
+`conda install python=3.10`
+Install pipenv
+`sudo apt install pipenv`
+Using pipenv on EC2 with conda installed
+`pipenv --python=$(conda run which python) --site-packages`
+Install mlflow
+`pipenv install mlflow`
+
+Start mlflow server. Creates sqlite database to store model experiments and artifacts.
+`mlflow server --backend-store-uri sqlite///backend.db --default-artifact-root ./artifact_local`
+Forward port via VS Code and visit UI in url pointed at `http://127.0.0.1:5000`
+
+Run mage
+Install and launch via docker
+`docker run -it -p 6789:6789 -v $(pwd):/home/src mageai/mageai /app/run_app.sh mage start machine_failure_prediction`
+Open browser to http://localhost:6789
+
+Launch Mage and the database service (PostgreSQL):
+`./scripts/start.sh`
+Open mage UI in browser [`http://localhost:6789`](http://localhost:6789)
+
+
+
 
 ## Project Organization
 
